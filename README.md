@@ -51,3 +51,5 @@ my first intro to terraform cloud and how it can transformed to voice to infrast
 
 ## Fire-rapid questions:
     What is the difference between docker and terraform?
+
+    Orgainsations Decentralise: https://www.youtube.com/watch?v=zm0QVutAkYg
