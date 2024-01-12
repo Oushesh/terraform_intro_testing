@@ -10,6 +10,9 @@ my first intro to terraform cloud and how it can transformed to voice to infrast
    Udemy Course for Hashicorp
 
 
+## Installation:
+   * 
+
 ## Steps: 
    * Get certification from hashicorp.
 
@@ -46,4 +49,5 @@ my first intro to terraform cloud and how it can transformed to voice to infrast
    10. 
 
 
-
+## Fire-rapid questions:
+    What is the difference between docker and terraform?
