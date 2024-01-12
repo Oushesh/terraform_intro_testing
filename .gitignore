@@ -1,1 +1,4 @@
 .terraform/*
+
+terraform_docker/.terraform/*
+terraform_gcp/.terraform/*
