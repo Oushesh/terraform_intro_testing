@@ -2,5 +2,6 @@
 
 terraform_docker/.terraform/*
 terraform_gcp/.terraform/*
+terraform_gcp_bucket/*
 
 google-cloud-sdk/*
