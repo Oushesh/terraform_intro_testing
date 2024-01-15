@@ -28,15 +28,11 @@ my first intro to terraform cloud and how it can transformed to voice to infrast
 ## Fire-rapid questions:
     What is the difference between docker and terraform?
     Orgainsations Decentralise: https://www.youtube.com/watch?v=zm0QVutAkYg
-<<<<<<< HEAD
 
 ## Personally Identifiable Information: something to look for.
-
-=======
 
 ## Terraform Google Example
 ![](terraform_google.png)
 
     * Install google cloud from here: gloud https://cloud.google.com/sdk/docs/install
     This will communicate with terraform registry service.
->>>>>>> f836bd8cea51b5c9cf096d7ee3ba242304834b29
