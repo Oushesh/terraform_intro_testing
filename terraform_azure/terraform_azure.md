@@ -6,5 +6,5 @@
 
    Github has different states of the codebase every individual is working on before being combined together. Terraform does the same.
 
-## Azure cloud installation: 
-   * 
+## Azure cloud installation:
+   * Link to azure cloud installation: 
