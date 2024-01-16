@@ -17,3 +17,4 @@ resource "aws_s3_bucket" "sample" {
     public_bucket = false
   }
 }
+
