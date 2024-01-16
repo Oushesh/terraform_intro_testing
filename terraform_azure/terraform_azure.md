@@ -4,9 +4,7 @@
    This is how terraform works. It creates a state for 
    for the infrastructure similar what github does for code.
 
-
    Github has different states of the codebase every individual is working on before being combined together. Terraform does the same.
-
 
 ## Azure cloud installation: 
    * 
