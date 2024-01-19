@@ -36,3 +36,7 @@ my first intro to terraform cloud and how it can transformed to voice to infrast
 
     * Install google cloud from here: gloud https://cloud.google.com/sdk/docs/install
     This will communicate with terraform registry service.
+
+## TODO: Fix Virtual Machine Configuration with azure: https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-cluster-create-terraform?tabs=azure-cli
+
+
