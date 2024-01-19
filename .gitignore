@@ -215,3 +215,6 @@ models/
 
 
 terraform_venv/*
+
+
+.idea/*
