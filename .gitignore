@@ -222,3 +222,4 @@ terraform_venv/*
 
 
 google-cloud-sdk.staging/*
+terraform_gcp_vm/gcp/*.json
