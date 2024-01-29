@@ -218,3 +218,7 @@ terraform_venv/*
 
 
 .idea/*
+
+
+
+google-cloud-sdk.staging/*
