@@ -222,4 +222,4 @@ terraform_venv/*
 
 
 google-cloud-sdk.staging/*
-terraform_gcp_vm/gcp/*.json
+terraform_gcp_vm/gcp_config/citric-earth-199400-92e91bc6d36c.json
