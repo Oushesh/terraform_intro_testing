@@ -1,7 +1,7 @@
 provider "google" {
   project = "citric-earth-199400"
-  //region  = "europe-west1"
-  //zone    = "europe-west1-b"
+  #region  = "europe-west1"
+  #zone    = "europe-west1-b"
 
   region = "us-east1"
   zone = "us-east1-c"
