@@ -12,8 +12,8 @@ resource "google_compute_disk" "vm_disk" {
   type  = "pd-ssd"
   size  = 100
   zone  = "us-east1-c"
-  //image = "ubuntu-2204-lts"
-  snapshot = "snapshot-1"
+  image = "ubuntu-2204-lts"
+  //snapshot = "snapshot-1"
 }
 
 resource "google_compute_instance" "vm_instance" {
@@ -22,11 +22,11 @@ resource "google_compute_instance" "vm_instance" {
 
 
   boot_disk {
-    source = google_compute_disk.vm_disk.name
-    //initialize_params {
-    //  image = "ubuntu-2204-lts"
+    //source = google_compute_disk.vm_disk.name
+    initialize_params {
+      image = "ubuntu-2204-lts"
       //image = "ubuntu-2004-lts"
-    //}
+    }
   }
 
   network_interface {

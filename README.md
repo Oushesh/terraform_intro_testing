@@ -1,5 +1,5 @@
 # terraform_intro_testing
-my first intro to terraform cloud and how it can transformed to voice to infrastructure from code. 
+   My first intro to terraform cloud and how it can transformed to voice to infrastructure from code. 
 
 ## Reference:
    https://www.youtube.com/watch?v=nvNqfgojocs
@@ -7,6 +7,8 @@ my first intro to terraform cloud and how it can transformed to voice to infrast
    Udemy Course for Hashicorp
 
 ## Installation:
+    brew tap hashicorp/tap
+    brew install hashicorp/tap/terraform
 
 ## Steps: 
    * Get certification from hashicorp.
@@ -42,3 +44,5 @@ my first intro to terraform cloud and how it can transformed to voice to infrast
    
    For cheap purposes i use Nvidia K80. Alternatives are T4, P4, A100. 
   
+## Terraform Testing:
+    
