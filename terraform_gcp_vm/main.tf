@@ -3,8 +3,14 @@ provider "google" {
   #region  = "europe-west1"
   #zone    = "europe-west1-b"
 
-  region = "us-east1"
-  zone = "us-east1-c"
+  #region = "us-east1"
+  #zone = "us-east1-c"
+
+  region = "us-central1"
+  zone = "us-central1-a"
+
+  #region = "asia-east1"
+  #zone = "asia-east1-a"
 }
 
 resource "google_compute_disk" "vm_disk" {
@@ -12,8 +18,8 @@ resource "google_compute_disk" "vm_disk" {
   type  = "pd-ssd"
   size  = 100
   zone  = "us-east1-c"
-  image = "ubuntu-2204-lts"
-  //snapshot = "snapshot-1"
+  //image = "ubuntu-2204-lts"
+  snapshot = "snapshot-1"
 }
 
 resource "google_compute_instance" "vm_instance" {
@@ -36,9 +42,10 @@ resource "google_compute_instance" "vm_instance" {
     }
   }
 
-  // Adding GPU
+  // Adding GPU. Check between nvidia-tesla-k80 or nvidia-tesla-p4
   guest_accelerator {
-    type = "nvidia-tesla-k80"
+    #type = "nvidia-tesla-k80"
+    type = "nvidia-tesla-p4"
     count = 1  # You can specify the number of GPUs you want
   }
 

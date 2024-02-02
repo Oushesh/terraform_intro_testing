@@ -1,10 +1,25 @@
 # terraform_intro_testing
    My first intro to terraform cloud and how it can transformed to voice to infrastructure from code. 
 
-## Reference:
-   https://www.youtube.com/watch?v=nvNqfgojocs
-   https://www.udemy.com/course/terraform_training/?utm_source=adwords&utm_medium=udemyads&utm_campaign=LongTail_la.EN_cc.ROW&utm_content=deal4584&utm_term=_._ag_77879423894_._ad_535397245857_._kw__._de_c_._dm__._pl__._ti_dsa-1007766171032_._li_9070408_._pd__._&matchtype=&gad_source=1&gclid=Cj0KCQiAwP6sBhDAARIsAPfK_wZNaPLNHA_Luyr2ptSmiXB1UGC4h4Mjr6DngjjrCvws69VFYIgr2ToaAlIrEALw_wcB
-   Udemy Course for Hashicorp
+   * Google Cloud Compute Platform:
+
+
+      Example Project:
+      terraform_gcp/
+      terraform_gcp_bucket/
+      terraform_gcp_vm/
+
+   * Azure Cloud 
+     Install azure-cli 
+      Ref: https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos
+
+      If new login was made, or location changed: use az login to reconfigure things
+
+
+      Example Project:
+      terraform_azure_vm
+      terraform_azure_big_gpu      
+
 
 ## Installation:
     brew tap hashicorp/tap
@@ -45,4 +60,10 @@
    For cheap purposes i use Nvidia K80. Alternatives are T4, P4, A100. 
   
 ## Terraform Testing:
+
+
+## Reference:
+   https://www.youtube.com/watch?v=nvNqfgojocs
+   https://www.udemy.com/course/terraform_training/?utm_source=adwords&utm_medium=udemyads&utm_campaign=LongTail_la.EN_cc.ROW&utm_content=deal4584&utm_term=_._ag_77879423894_._ad_535397245857_._kw__._de_c_._dm__._pl__._ti_dsa-1007766171032_._li_9070408_._pd__._&matchtype=&gad_source=1&gclid=Cj0KCQiAwP6sBhDAARIsAPfK_wZNaPLNHA_Luyr2ptSmiXB1UGC4h4Mjr6DngjjrCvws69VFYIgr2ToaAlIrEALw_wcB
+   Udemy Course for Hashicorp
     
