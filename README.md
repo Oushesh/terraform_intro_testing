@@ -13,8 +13,7 @@
      Install azure-cli 
       Ref: https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos
 
-      If new login was made, or location changed: use az login to reconfigure things
-
+      If new login was made, or location changed: use az login to reconfigure things.
 
       Example Project:
       terraform_azure_vm
