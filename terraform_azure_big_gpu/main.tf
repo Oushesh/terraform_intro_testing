@@ -1,7 +1,6 @@
 resource "random_pet" "rg_name" {
   prefix = var.resource_group_name_prefix
 }
-
 resource "azurerm_resource_group" "rg" {
   name     = random_pet.rg_name.id
   location = var.resource_group_location
@@ -85,7 +84,7 @@ resource "azurerm_linux_virtual_machine" "test" {
   availability_set_id   = azurerm_availability_set.avset.id
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.test[count.index].id]
-  size                  = "Standard_DS1_v2"
+  size                  = "Standard_NV4as_v4"
 
   # Uncomment this line to delete the OS disk automatically when deleting the VM
   # delete_os_disk_on_termination = true

@@ -20,6 +20,11 @@
       terraform_azure_big_gpu      
 
 
+      In case of contradiction see/list the options available in the region:
+      az vm list-sizes --location eastus
+      az vm list-sizes --location westus
+
+
 ## Installation:
     brew tap hashicorp/tap
     brew install hashicorp/tap/terraform
@@ -57,7 +62,11 @@
    Ref: https://github.com/GoogleCloudPlatform/compute-gpu-installation
    
    For cheap purposes i use Nvidia K80. Alternatives are T4, P4, A100. 
-  
+
+## 
+
+
+
 ## Terraform Testing:
 
 
