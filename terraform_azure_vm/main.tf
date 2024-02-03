@@ -34,13 +34,13 @@ resource "azurerm_network_security_group" "my_terraform_nsg" {
   resource_group_name = azurerm_resource_group.rg.name
 
   security_rule {
-    name                       = "RDP"
+    name                       = "SSH"
     priority                   = 1000
     direction                  = "Inbound"
     access                     = "Allow"
-    protocol                   = "*"
+    protocol                   = "Tcp"
     source_port_range          = "*"
-    destination_port_range     = "3389"
+    destination_port_range     = "22"
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
@@ -87,11 +87,20 @@ resource "azurerm_storage_account" "my_storage_account" {
 }
 
 
-# Create virtual machine
-resource "azurerm_windows_virtual_machine" "main" {
-  name                  = "azurevirtualllm"
+# Create Linux virtual machine
+resource "azurerm_linux_virtual_machine" "main" {
+  name                  = "azure-virtualllm"
   admin_username        = "azureuser"
   admin_password        = random_password.password.result
+  
+  
+  admin_ssh_key {
+    username = "azureuser"
+    public_key = file("~/.ssh/id_rsa.pub")
+  }
+  
+  
+  
   location              = azurerm_resource_group.rg.location
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.my_terraform_nic.id]
@@ -104,11 +113,11 @@ resource "azurerm_windows_virtual_machine" "main" {
   }
 
   source_image_reference {
-    publisher = "MicrosoftWindowsServer"
-    offer     = "WindowsServer"
-    sku       = "2022-datacenter-azure-edition"
-    version   = "latest"
-  }
+  publisher = "Canonical"
+  offer     = "UbuntuServer"
+  sku       = "20.04-LTS"
+  version   = "latest"
+}
 
 
   boot_diagnostics {
@@ -118,18 +127,12 @@ resource "azurerm_windows_virtual_machine" "main" {
 
 # Install IIS web server to the virtual machine
 resource "azurerm_virtual_machine_extension" "web_server_install" {
-  name                       = "aturerm_virtual_machine_extension_1"
-  virtual_machine_id         = azurerm_windows_virtual_machine.main.id
+  name                       = "azurerm_virtual_machine_extension_1"
+  virtual_machine_id         = azurerm_linux_virtual_machine.main.id
   publisher                  = "Microsoft.Compute"
   type                       = "CustomScriptExtension"
   type_handler_version       = "1.8"
   auto_upgrade_minor_version = true
-
-  settings = <<SETTINGS
-    {
-      "commandToExecute": "powershell -ExecutionPolicy Unrestricted Install-WindowsFeature -Name Web-Server -IncludeAllSubFeature -IncludeManagementTools"
-    }
-  SETTINGS
 }
 
 # Generate random text for a unique storage account name
